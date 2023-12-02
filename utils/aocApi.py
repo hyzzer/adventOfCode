@@ -9,7 +9,7 @@ def getPuzzleInput(year, exerciceNumber, url='', sessionCookie=''):
         
     if sessionCookie == '':
         with open("{}/.session-cookie".format(ROOT_DIR)) as cookieFile:
-            sessionCookie = cookieFile.readline()
+            sessionCookie = cookieFile.readline().strip()
 
     parameters = {
         'session' : sessionCookie
